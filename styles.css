@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+
+
+body {
+    background-image: url("https://toppng.com/uploads/thumbnail//fundo-escuro-11551057051fbkbjpscdj.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(8, 8, 8);
+
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+header div {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+
+    background: linear-gradient(90deg, #C91842, #5CC2E2);
+    padding: 4px;
+    display: flex;
+
+    transition: transform .4s;
+}
+header div:hover {
+    transform: scale(1.1)
+}
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    width: 90%;
+    max-width: 520px;
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    background: linear-gradient(90deg, #C91842, #5CC2E2);
+    padding-top: 4px;
+    border-radius: 12px;
+}
+section div {
+    background: #262629;
+    border-radius: 8px;
+    box-shadow: #101010 0px 3px 5px;
+    
+    padding: 32px;
+    padding-top: 24px;
+}
+section h2 {
+    line-height: 160%;
+}
+section p {
+    line-height: 160%;
+    letter-spacing: -0.18px;
+    color: #C1C1C1;
+}
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+section ul img {
+    width: 100px;
+    height: 150px;
+    border-radius: 8px;
+}
+section li {
+    transition: transform .3s;
+}
+section li:hover {
+    transform: scale(1.1);
+}
+
+/* ------ Animation -------- */
+
+header div {
+    animation: aparecer 2s;
+}
+section {
+    animation: paraCima 1s backwards;
+}
+section:nth-child(2) {
+    animation-delay: .5s;
+}
+section:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes paraCima {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
